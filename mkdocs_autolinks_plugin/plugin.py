@@ -60,7 +60,7 @@ class AutoLinkReplacer:
             )
 
         abs_link_path = abs_link_paths[0]
-        rel_link_path = quote(os.path.relpath(abs_link_path, abs_linker_dir))
+        rel_link_path = quote(os.path.relpath(abs_link_path))
 
         # Construct the return link by replacing the filename with the relative path to the file
         return match.group(0).replace(match.group(3), rel_link_path)
